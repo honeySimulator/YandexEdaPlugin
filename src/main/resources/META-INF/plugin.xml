@@ -1,0 +1,40 @@
+<idea-plugin>
+    <id>com.example.YandexEdaPlugin3</id>
+
+    <name>YandexEdaPlugin3</name>
+
+    <vendor email="ovsysha@gmail.com" url="https://github.com/honeySimulator">Ovsysha</vendor>
+
+    <description><![CDATA[
+    Plugin to order food at<br>
+    <em>Yandex Eda</em>
+  ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+
+    <actions>
+        <action id="com.example.yandexedaplugin3.OrderFoodAction" class="com.example.yandexedaplugin3.OrderFoodAction"
+                text="Заказать Яндекс Еду" description="Сделать заказ в Яндекс Еде"
+                icon="META-INF/pluginIcon@2.png">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl SLASH" second-keystroke="WINDOWS"/>
+            <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="ToolbarRunGroup" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+
+        </action>
+        <action id="com.example.yandexedaplugin3.SearchFoodAction" class="com.example.yandexedaplugin3.SearchFoodAction"
+                text="Поиск в Яндекс Еде" description="Найти еду" icon="META-INF/pluginIcon@2.png">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl SLASH" second-keystroke="ctrl CLOSE_BRACKET"/>
+            <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="ToolbarRunGroup" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
